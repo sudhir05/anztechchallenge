@@ -1,0 +1,18 @@
+#build and run nodejs
+language: node_js
+node_js: 
+  - "stable"
+cache:
+  directories:
+    - "node_modules"
+#sonarcube checks
+addons:
+  sonarcloud:
+    organization: "sudhir05-github"
+    token:
+      secure: "edf44b2b46c7fb4e6e3cb914892a42565816ebcc"
+install:
+  npm install
+script:
+  - sonar-scanner
+  - npm test
