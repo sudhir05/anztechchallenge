@@ -1,9 +1,9 @@
 Running API locally
 -------------------------
-clone api locally - `https://github.com/sudhir05/anztechchallenge.git`
-run api locally without an image- `npm start run`
-port 3000 will be opened, hit url http://localhost:3000/version
-sample response would show latest api version, last commit and description.
+- clone api locally - `https://github.com/sudhir05/anztechchallenge.git`
+- run api locally without an image- `npm start run`
+- port 3000 will be opened, hit url http://localhost:3000/version
+- sample response would show latest api version, last commit and description.
 
 ```
 {
@@ -19,32 +19,36 @@ sample response would show latest api version, last commit and description.
 
 To run test cases 
 ----------------------------------------------
-Run `npm test`
+- Two Test cases has been written.
+    Run `npm test`
 
-To check for any none vulnerabilities
+- To check for any none vulnerabilities
 
-Run `npm audit`
+    Run `npm audit`
 
 To build docker image
 ----------------------
-This API can be containerised using Dockerfile (Note : In order to run into local, docker setup should be present)
+- This API can be containerised using Dockerfile (Note : In order to run into local, docker setup should be present)
 
-Build docker image - `docker build  -t techanz .`
-Run docker image - `docker run -d -p 3000:3000 techanz`
+- Build docker image - `docker build  -t techanz .`
+- Run docker image - `docker run -d -p 3000:3000 techanz`
 
-Port 3000 will be opened and you can hit the service using url http://localhost:3000/version
+- Port 3000 will be opened and you can hit the service using url http://localhost:3000/version
 
 Build pipeline
 ----------------
-Build pipeline has been created using travis-ci.
-Build will automatically start when any changes pushed in github.
-Build logs will display sonarQube code quality results and test case results.
-`.travis.yml` is having all the configuration.
-`sonar-project.properties` is having repository details for scanning.
-Sample sonarQube report can be seen https://sonarcloud.io/dashboard?id=sudhir05_anztechchallenge
+- Build pipeline has been created using travis-ci.
+- Build will automatically start when any changes pushed in github.
+- Build logs will display sonarQube code quality results and test case results.
+- All the test cases passes.
+- Docker image will be build
+- `.travis.yml` is having all the configuration.
+- `sonar-project.properties` is having repository details for scanning.
+- SONAR_TOKEN has been added to the repository setting.
+- Sample sonarQube report can be seen https://sonarcloud.io/dashboard?id=sudhir05_anztechchallenge
 
 
 What could still be done
 ---------------------------------
-
-
+- Image could have been deployed to ECS/AKS/GKE or kubernetes cluster.
+- There is no security or vulnerability scanning on the image.
