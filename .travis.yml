@@ -8,7 +8,7 @@ addons:
   sonarcloud:
     organization: "sudhir05-github"
     token:
-      secure: "04193a3ea7807d1afacf9d723a8cb0a009db9704"
+      secure: "edf44b2b46c7fb4e6e3cb914892a42565816ebcc"
 install: npm install
 script:
 - sonar-scanner
