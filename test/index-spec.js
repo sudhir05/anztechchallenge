@@ -5,7 +5,7 @@ var should = chai.should();
 chai.use(chaiHttp);
 //check whether the response code is 200 or not
 describe('These test cases are for tech challenge API', () => {
-  it('Check responses on /version GET', function(done) {
+  it('Check 200 response on /version GET', function(done) {
     chai.request(server)
       .get('/version')
       .end(function(err, res){
@@ -14,7 +14,7 @@ describe('These test cases are for tech challenge API', () => {
       });
   });
   //validate json response
-  it('Validate json response', function(done) {
+  it('Check if json contains all properties', function(done) {
     chai.request(server)
       .get('/version')
       .end(function(err, res){
