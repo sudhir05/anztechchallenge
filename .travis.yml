@@ -4,6 +4,8 @@ node_js:
 cache:
   directories:
   - node_modules
+services:
+  - docker
 addons:
   sonarcloud:
     organization: "sudhir05-github"
@@ -12,3 +14,7 @@ install: npm install
 script:
 - sonar-scanner
 - npm test
+- docker build --tag "$IMAGE_NAME" .
+env:
+  global:
+    - IMAGE_NAME=anztech
