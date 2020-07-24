@@ -51,4 +51,6 @@ Build pipeline
 What could still be done
 ---------------------------------
 - Image could have been deployed to ECS/AKS/GKE or kubernetes cluster.
-- There is no security or vulnerability scanning on the image.
+- There is no vulnerability scanning on the image.
+- SONAR_TOKEN is not encrypted, this can be encrypted and pulled from hashicorp vault, aws secretmanager e.t.c.
+- Attach checkmarx scanning.
